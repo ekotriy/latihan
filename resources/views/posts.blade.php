@@ -9,10 +9,10 @@
                     <input type="hidden" name="category" value="{{ request('category') }}">
                 @endif
                 @if (request('author'))
-                    <input type="hidden" name="author" value="{{ request ('author') }}">
+                    <input type="hidden" name="author" value="{{ request('author') }}">
                 @endif
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search..." name="search" 
+                    <input type="text" class="form-control" placeholder="Search..." name="search"
                         value="{{ request('search') }}">
                     <button class="btn btn-danger" type="submit">Search</button>
                 </div>
@@ -68,5 +68,8 @@
                 </div>
             @endforeach
         </div>
+    </div>
+    <div class="d-flex justify-content-end">
+        {{ $posts->links() }}
     </div>
 @endsection
