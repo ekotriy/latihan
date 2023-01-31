@@ -1,10 +1,9 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
-use App\Models\Post;
 use App\Models\Category;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -47,3 +46,5 @@ Route::get('/categories', function () {
         "active" => "categories"
     ]);
 });
+
+Route::get('/login',[LoginController::class ,'index']);
